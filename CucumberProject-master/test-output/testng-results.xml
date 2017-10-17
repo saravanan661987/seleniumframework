@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19232" started-at="2017-10-17T20:36:11Z" finished-at="2017-10-17T20:36:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19232" started-at="2017-10-17T20:36:11Z" finished-at="2017-10-17T20:36:30Z">
+      <class name="steps.HometestSteps">
+        <test-method status="PASS" signature="Testcase1()[pri:0, instance:steps.HometestSteps@7f77e91b]" name="Testcase1" duration-ms="8998" started-at="2017-10-17T15:36:11Z" finished-at="2017-10-17T15:36:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase1 -->
+        <test-method status="PASS" signature="Testcase2()[pri:0, instance:steps.HometestSteps@7f77e91b]" name="Testcase2" duration-ms="10218" started-at="2017-10-17T15:36:20Z" finished-at="2017-10-17T15:36:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase2 -->
+      </class> <!-- steps.HometestSteps -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
