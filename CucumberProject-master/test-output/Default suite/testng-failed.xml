@@ -5,7 +5,8 @@
     <classes>
       <class name="steps.HometestSteps">
         <methods>
-          <include name="User_clicks_on_the_All_Classess_link"/>
+          <include name="Testcase2"/>
+          <include name="Testcase1"/>
         </methods>
       </class> <!-- steps.HometestSteps -->
     </classes>

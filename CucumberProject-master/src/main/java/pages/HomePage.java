@@ -22,8 +22,10 @@ public class HomePage extends Base {
 	String xpathLnkClasses = ObjIdentifier("LnkClasses");
 	private WebElement LnkClasses = driver.findElement(By.xpath(xpathLnkClasses));
 	
+	
 	String xpathLnkAllClasses = ObjIdentifier("LnkAllClasses");
 	private WebElement LnkAllClasses = driver.findElement(By.xpath(xpathLnkAllClasses));
+	
 	
 	
 	public void setLnkClasses(WebElement LnkClasses)

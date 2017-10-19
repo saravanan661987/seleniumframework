@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19232" started-at="2017-10-17T20:36:11Z" finished-at="2017-10-17T20:36:30Z">
+  <suite name="Default suite" duration-ms="18005" started-at="2017-10-18T16:05:26Z" finished-at="2017-10-18T16:05:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19232" started-at="2017-10-17T20:36:11Z" finished-at="2017-10-17T20:36:30Z">
+    <test name="Default test" duration-ms="18005" started-at="2017-10-18T16:05:26Z" finished-at="2017-10-18T16:05:44Z">
       <class name="steps.HometestSteps">
-        <test-method status="PASS" signature="Testcase1()[pri:0, instance:steps.HometestSteps@7f77e91b]" name="Testcase1" duration-ms="8998" started-at="2017-10-17T15:36:11Z" finished-at="2017-10-17T15:36:20Z">
+        <test-method status="PASS" signature="Testcase1()[pri:0, instance:steps.HometestSteps@7f77e91b]" name="Testcase1" duration-ms="9752" started-at="2017-10-18T11:05:26Z" finished-at="2017-10-18T11:05:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase1 -->
-        <test-method status="PASS" signature="Testcase2()[pri:0, instance:steps.HometestSteps@7f77e91b]" name="Testcase2" duration-ms="10218" started-at="2017-10-17T15:36:20Z" finished-at="2017-10-17T15:36:30Z">
+        <test-method status="PASS" signature="Testcase2()[pri:0, instance:steps.HometestSteps@7f77e91b]" name="Testcase2" duration-ms="8230" started-at="2017-10-18T11:05:35Z" finished-at="2017-10-18T11:05:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase2 -->

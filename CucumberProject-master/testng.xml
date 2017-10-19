@@ -2,8 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AEMSuite">
   <test name="AEMtest">
-    <classes>
-      <class name="steps.HometestSteps"/>
-    </classes>
+    <classes>    	
+      <class name="steps.HometestSteps">
+       <methods>
+      	<include name="Testcase1" />
+      	<include name="Testcase2" />
+       </methods>
+    </class>
+    </classes>   
   </test> <!-- AEMtest -->
 </suite> <!-- AEMSuite -->

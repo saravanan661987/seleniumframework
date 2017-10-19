@@ -6,8 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.*;
+import org.junit.experimental.categories.Category;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+//import org.testng.annotations.*;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -20,14 +22,16 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class HometestSteps extends Base {
+public class HomeTest extends Base {
 	WebDriver driver;
 	HomePage HomePage;
 	//ExtentReports extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
 	//ExtentTest Logger = extent.startTest("passTest");
-	ExtentReports report = new ExtentReports("C:\\Report\\LearnAutomation.html" );
-	ExtentTest logger; 
 	
+	
+	static ExtentReports report = new ExtentReports("C:\\Report\\LearnAutomation.html");
+	ExtentTest logger; 
+
 	
 	public void OpenBrowser() {		
 		
@@ -53,7 +57,9 @@ public class HometestSteps extends Base {
 		clickElement(objHP.getLnkClasses(), logger);		
 		clickElement(objHP.getLnkAllClasses(), logger);
 	
-		CloseBrowser();
+		CloseBrowser();		
+		
+		
 	}
 	
 	@Test
@@ -65,20 +71,29 @@ public class HometestSteps extends Base {
 		HomePage objHP = new HomePage();
 		//List<Employee> emp = retriveValueFromDataBase();	
 		clickElement(objHP.getLnkClasses(), logger);		
-		//clickElement(objHP.getLnkAllClasses(), logger);
-	
+		clickElement(objHP.getLnkAllClasses(), logger);
+		
 		CloseBrowser();
+		
+		
+		
 	}
 
 	
 	public void CloseBrowser() {				
 		//driver.get("C:\\Report\\LearnAutomation.html");
 		logger.log(LogStatus.PASS, "verify Browserclose" ,"Browser is closed successfully");
-		report.endTest(logger);
-		report.flush();
+		report.endTest(logger);		
 		driver.quit();
-		
-		
+			
+	}
+	
+	@AfterClass
+	public static void SaveReport() {				
+		//driver.get("C:\\Report\\LearnAutomation.html");
+		report.flush();
+		report.close();
+		System.out.println("text");
 	}
 
 }
