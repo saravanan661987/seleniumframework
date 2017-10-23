@@ -29,7 +29,7 @@ public class HomeTest extends Base {
 	//ExtentTest Logger = extent.startTest("passTest");
 	
 	
-	static ExtentReports report = new ExtentReports("C:\\Report\\LearnAutomation.html");
+	static ExtentReports report = new ExtentReports(System.getProperty("user.dir") +"/test-output/STMExtentReport.html");
 	ExtentTest logger; 
 
 	
@@ -47,7 +47,7 @@ public class HomeTest extends Base {
 	
 	
 	@Test
-	public void Testcase1() throws SQLException {
+	public void AEMClasses() throws SQLException {
 		//extent.startTest("TC01.1","This test is a positive login test for ParaBank");
 		
 		logger=report.startTest("TestCase1");
@@ -63,7 +63,7 @@ public class HomeTest extends Base {
 	}
 	
 	@Test
-	public void Testcase2() throws SQLException {
+	public void AEMAllClasses() throws SQLException {
 		//extent.startTest("TC01.1","This test is a positive login test for ParaBank");
 		
 		logger=report.startTest("Testcase2");
