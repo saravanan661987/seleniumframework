@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="steps.HometestSteps">
+      <class name="steps.HomeTest">
         <methods>
-          <include name="Testcase2"/>
-          <include name="Testcase1"/>
+          <include name="AEMClasses"/>
+          <include name="AEMAllClasses"/>
+          <include name="SaveReport"/>
         </methods>
-      </class> <!-- steps.HometestSteps -->
+      </class> <!-- steps.HomeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

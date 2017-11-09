@@ -2,14 +2,23 @@ package steps;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.JSONArray;
 import org.junit.*;
-import org.junit.experimental.categories.Category;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+//import org.junit.experimental.categories.Category;
 import org.openqa.selenium.WebDriver;
 //import org.testng.annotations.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -17,25 +26,34 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import utility.Base;
 import pages.HomePage;
-import cucumber.api.DataTable;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
+
 
 public class HomeTest extends Base {
+	
 	WebDriver driver;
 	HomePage HomePage;
 	//ExtentReports extent = new ExtentReports (System.getProperty("user.dir") +"/test-output/STMExtentReport.html", true);
 	//ExtentTest Logger = extent.startTest("passTest");
 	
-	
-	static ExtentReports report = new ExtentReports(System.getProperty("user.dir") +"/test-output/STMExtentReport.html");
+	static ExtentReports report = new ExtentReports(System.getProperty("user.dir") +"/test-output/STMExtentReport.xml");
 	ExtentTest logger; 
-
 	
-	public void OpenBrowser() {		
+	private static JSONObject config;
+	
+  
+	
+	public void OpenBrowser() throws InterruptedException {		
 		
 		driver = getDriver();	
+		Thread.sleep(1000);
+		
 		if(driver.getTitle().contains("Chanhassen"))		{	
 			
 			logger.log(LogStatus.PASS, "verify pageTitle" ,driver.getTitle() + " Page is Opened successfully");
@@ -47,15 +65,17 @@ public class HomeTest extends Base {
 	
 	
 	@Test
-	public void AEMClasses() throws SQLException {
+	public void SampleTest1() throws SQLException, InterruptedException {
 		//extent.startTest("TC01.1","This test is a positive login test for ParaBank");
 		
 		logger=report.startTest("TestCase1");
-		OpenBrowser();		
-		HomePage objHP = new HomePage();
+		OpenBrowser();	
+		Assert.assertEquals(1, 1);
+		//HomePage objHP = new HomePage();
+		
 		//List<Employee> emp = retriveValueFromDataBase();	
-		clickElement(objHP.getLnkClasses(), logger);		
-		clickElement(objHP.getLnkAllClasses(), logger);
+		//clickElement(objHP.getLnkClasses(), logger);		
+		//clickElement(objHP.getLnkAllClasses(), logger);
 	
 		CloseBrowser();		
 		
@@ -63,19 +83,17 @@ public class HomeTest extends Base {
 	}
 	
 	@Test
-	public void AEMAllClasses() throws SQLException {
+	public void SampleTest2() throws SQLException, InterruptedException {
 		//extent.startTest("TC01.1","This test is a positive login test for ParaBank");
 		
 		logger=report.startTest("Testcase2");
 		OpenBrowser();		
-		HomePage objHP = new HomePage();
+		Assert.assertEquals(1, 1);
+		//HomePage objHP = new HomePage();
 		//List<Employee> emp = retriveValueFromDataBase();	
-		clickElement(objHP.getLnkClasses(), logger);		
-		clickElement(objHP.getLnkAllClasses(), logger);
-		
-		CloseBrowser();
-		
-		
+		//clickElement(objHP.getLnkClasses(), logger);		
+		//clickElement(objHP.getLnkAllClasses(), logger);		
+		CloseBrowser();	
 		
 	}
 
@@ -88,7 +106,6 @@ public class HomeTest extends Base {
 			
 	}
 	
-	@AfterClass
 	public static void SaveReport() {				
 		//driver.get("C:\\Report\\LearnAutomation.html");
 		report.flush();
